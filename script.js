@@ -41,6 +41,12 @@ function setPersonalInfoData(){
 
     let phonestr = dictoLanguage["phone"];
 
+    personalInfo_name_label.textContent = dictoLanguage["name"];
+    personalInfo_phone_label.textContent =  dictoLanguage["phone"];
+    personalInfo_email_label.textContent = dictoLanguage["email"];
+    personalInfo_title_label.textContent = dictoLanguage["title"];
+    personalInfo_country_label.textContent = dictoLanguage["country"];
+
     
     personalInfo_name.textContent = personalInfo.name;
     personalInfo_phone.textContent =  personalInfo.phone;

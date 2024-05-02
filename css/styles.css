@@ -16,10 +16,29 @@ header {
     justify-content: center;
     width: 100%;
     min-width: 320px;
-    height: 150px;
+    height: 100px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 5rem;
+    font-size: 2rem;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.main-cv-container {
+    width: 90%;
+    background-color: aquamarine;
+    min-width: 320px;
+    border-radius: 15px;
+}
+
+.main-cv-personal--title {
+    text-align: center;
+    width: 100%;
+    background-color: blue;
 }
