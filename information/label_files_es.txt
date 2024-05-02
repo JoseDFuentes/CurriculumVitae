@@ -1,0 +1,5 @@
+name=Nombre
+title=Profesión
+phone=Teléfono
+email=Correo electrónico
+countryResidence=País de residencia
