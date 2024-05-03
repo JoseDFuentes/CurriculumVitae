@@ -40,14 +40,14 @@ async function setData() {
 function setPersonalInfoData(){
 
     let phonestr = dictoLanguage["phone"];
-
+/*
     personalInfo_name_label.textContent = dictoLanguage["name"];
     personalInfo_phone_label.textContent =  dictoLanguage["phone"];
     personalInfo_email_label.textContent = dictoLanguage["email"];
     personalInfo_title_label.textContent = dictoLanguage["title"];
     personalInfo_country_label.textContent = dictoLanguage["country"];
 
-    
+  */  
     personalInfo_name.textContent = personalInfo.name;
     personalInfo_phone.textContent =  personalInfo.phone;
     personalInfo_email.textContent = personalInfo.email;
@@ -124,9 +124,9 @@ function setWorkExperienceCard(workExperience){
     let companyNameDiv = document.createElement('div');
     let companyNameLabel = document.createElement('p');
     companyNameLabel.classList.add('main-cv-workhistory-card-label');
-    companyNameLabel.textContent = "Empresa";
+    //companyNameLabel.textContent = "Empresa";
     let companyName = document.createElement('p');
-    companyName.classList.add('main-cv-workhistory-card-text');
+    companyName.classList.add('main-cv-workhistory-card-company');
     companyName.textContent = workExperience.company;
     let companyUrl = document.createElement('a');
     companyUrl.classList.add('main-cv-workhistory-companyUrl');
@@ -140,7 +140,7 @@ function setWorkExperienceCard(workExperience){
     let companyPositionDiv = document.createElement('div');
     let companyPositionLabel = document.createElement('p');
     companyPositionLabel.classList.add('main-cv-workhistory-card-label');
-    companyPositionLabel.textContent = "Posición";
+    //companyPositionLabel.textContent = "Posición";
     let companyPosition = document.createElement('p');
     companyPosition.classList.add('main-cv-workhistory-card-text');
     companyPosition.textContent = workExperience.position;
@@ -152,7 +152,7 @@ function setWorkExperienceCard(workExperience){
     let companyStartDateDiv = document.createElement('div');
     let companyStartDateLabel = document.createElement('p');
     companyStartDateLabel.classList.add('main-cv-workhistory-card-label');
-    companyStartDateLabel.textContent = "Fecha Incio";
+    //companyStartDateLabel.textContent = "Fecha Incio";
     let companyStartDate = document.createElement('p');
     companyStartDate.classList.add('main-cv-workhistory-card-text');
     companyStartDate.textContent = workExperience.startDate;
@@ -164,7 +164,7 @@ function setWorkExperienceCard(workExperience){
     let companyEndDateDiv = document.createElement('div');
     let companyEndDateLabel = document.createElement('p');
     companyEndDateLabel.classList.add('main-cv-workhistory-card-label');
-    companyEndDateLabel.textContent = "Fecha Final";
+    //companyEndDateLabel.textContent = "Fecha Final";
     let companyEndDate = document.createElement('p');
     companyEndDate.classList.add('main-cv-workhistory-card-text');
     companyEndDate.textContent = workExperience.endDate;
