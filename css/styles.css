@@ -70,14 +70,21 @@ main {
     padding-left: 15px;
     background-color: var(--dark-green);
     color: var(--white);
+    cursor: pointer;
+    border: none;
+    outline: nones;
+    vertical-align: middle;
 }
 
 .main-cv-personal--container {
     width: 100%;
     height: auto;
     justify-content: center;
-    padding: 20px 10px 20px;
+    /*padding: 20px 10px 20px;*/
     background-color: var(--light-green);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
     
 }
 
@@ -180,10 +187,44 @@ main {
     line-height: 3rem;
 }
 
+
+.main-cv-workhistory-card--container {
+    display: flex;
+}
+
+.main-cv-workhistory-card-startdate-icon {
+    height: 40px;
+    width: 40px;
+    background-image: url('../assets/icons/start-date-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+.main-cv-workhistory-card-enddate-icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url('../assets/icons/end-date-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+
+}
+
+
 .main-cv-workhistory-card-text {
     font-weight: bold;
     line-height: 3rem;
+    padding-left: 20px;
 }
+
+
+
 
 .main-cv-workhistory-elem {
     list-style: none;
