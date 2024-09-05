@@ -1,8 +1,9 @@
 :root {
-    --dark-green: #2D3B35;
-    --medium-green: #41574D;
-    --light-green: #81A494;
-    --pale-green: #617E71;
+    --dark-blue: #061B2A;
+    --dark-blue-1: #020a0f;
+    --medium-blue: #042B46;
+    --light-blue: #BEE0F8;
+    --pale-blue: #264357;
     --black: #000000;
     --white: #FFFFFF;
 }
@@ -15,7 +16,9 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'DM Sans', 'sans-serif';
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header {
@@ -25,14 +28,18 @@ header {
     justify-content: center;
     width: 100%;
     min-width: 320px;
-    height: 100px;
+    height: 200px;
     text-align: center;
     color: var(--white);
-    background-color: var(--dark-green);
+    background-color: var(--dark-blue);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
 }
 
 main {
@@ -41,34 +48,44 @@ main {
     justify-content: center;
     font-size: 1.6rem;
     width: 100%;
-    background-color: var(--medium-green);
+    background-color: var(--medium-blue);
     padding-top: 20px;
 }
 
 .main-cv-container {
-    width: 80%;
-    background-color: var(--medium-green);
+    width: 100%;
+    background-color: var(--medium-blue);
     min-width: 290px;
     border-radius: 15px;
+    align-items: flex-end;
 
+}
+
+.main-cv-profile-pic {
+    position: absolute;
+    top: -50px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
 }
 
 .main-cv-personal {
     width: 100%;
-    display: flex;
+    display: left;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .main-cv-personal--title {
-    text-align: left;
+    text-align: center;
     width: 100%;
-    height: 50;
+    height: 120px;
     font-size: 1.4rem;
-    padding-top: 15px;
+    padding-top: 90px;
     padding-left: 15px;
-    background-color: var(--dark-green);
+    background-color: var(--dark-blue);
     color: var(--white);
 }
 
@@ -77,7 +94,7 @@ main {
     height: auto;
     justify-content: center;
     padding: 20px 10px 20px;
-    background-color: var(--light-green);
+    background-color: var(--light-blue);
     
 }
 
@@ -102,11 +119,14 @@ main {
 }
 
 .main-cv-profesional--container {
-    width: 100%;
+    width: 90%;
     height: auto;
     justify-content: center;
+    align-items: center;
     padding: 20px 10px 20px;
-    background-color: var(--light-green);
+    background-color: var(--dark-blue-1);
+    border-radius: 15px;
+    margin: 5px auto;
 }
 
 .main-cv-profesional--title {
@@ -116,24 +136,23 @@ main {
     font-size: 1.4rem;
     padding-top: 15px;
     padding-left: 15px;
-    background-color: var(--dark-green);
+    background-color: var(--dark-blue);
     color: var(--white);
 }
 
 .main-cv-profesional-summary {
     margin-bottom: 20px;
+    color: var(--light-blue);
 }
 
 .main-cv-profesional-techs li {
-    list-style: none;
-    line-height: 2rem;
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 10px 0px;
+    list-style:circle;
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+    margin: 2px 15px;
+    padding: 2px 15px;
     height: auto;
-    padding: 15px 5px;
-    color: var(--black);
-    background-color: var(--pale-green);
+    color: var(--light-blue);
 }
 
 .main-cv-workhistory {
@@ -141,7 +160,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 15px;
+    margin: 15px auto;
 }
 
 .main-cv-workhistory--title {
@@ -151,48 +170,100 @@ main {
     font-size: 1.4rem;
     padding-top: 15px;
     padding-left: 15px;
-    background-color: var(--dark-green);
+    background-color: var(--dark-blue);
     color: var(--white);
 }
 
 .main-cv-workhistory--container {
-    
+    display: inline-block;
     width: 100%;
     height: auto;
     justify-content: center;
     padding: 20px 10px 20px;
-    background-color: var(--light-green);
+    background-color: var(--dark-blue);
+}
+
+.main-cv-workhistory-button {
+    background-color: var(--dark-blue-1);
+    color: var(--light-blue);
 }
 
 .main-cv-workhistory-card {
-    width: 100%;
+    width: 350px;
     height: auto;
     font-size: 1.4rem;
-    background-color: var(--dark-green);
-    margin-top: 10px;
+    background-color: var(--dark-blue-1);
+    margin: 10px auto;
+    min-width: 160px;
+    max-width: 360px;
     padding: 10px 10px;
     color: var(--white);
+    border-radius: 15px;
 }
 
+.main-cv-workhistory-timelapse {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timelapse-icon {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin: 0px 10px;
+    background-image: url('../assets/icons/time-lapse-ico.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-cv-workhistory-linkDiv {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px
+}
+
+.main-cv-workhistory-span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+    background-image: url('../assets/icons/link-icon.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-cv-workhistory-a {
+    text-decoration: none;
+    height: 20px;
+    color: var(--light-blue);
+}
+
+
 .main-cv-workhistory-card-company {
-    font-weight: bold;
+    font-weight: 600;
     font-size: 2rem;
     line-height: 3rem;
 }
 
 .main-cv-workhistory-card-text {
-    font-weight: bold;
+    font-weight: 500;
     line-height: 3rem;
 }
 
+.main-cv-workhistory-header {
+    height: 50px;
+}
+
 .main-cv-workhistory-elem {
-    list-style: none;
-    line-height: 2rem;
+    list-style: circle;
+    line-height: 1.5rem;
     font-size: 1.4rem;
-    font-weight: bold;
-    margin: 10px 0px;
+    font-weight: 400;
+    margin: 5px 15px;
     height: auto;
     padding: 15px 5px;
-    color: var(--black);
-    background-color: var(--pale-green);   
+    color: var(--light-blue);
+    
 }

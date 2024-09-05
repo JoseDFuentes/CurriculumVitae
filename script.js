@@ -149,34 +149,81 @@ function setWorkExperienceCard(workExperience){
     companyPositionDiv.appendChild(companyPosition);
     workExpCard.append(companyPositionDiv);
 
+    //LINK
+
+    const companyLinkDiv = document.createElement('div');
+    companyLinkDiv.classList.add('main-cv-workhistory-linkDiv');
+
+    const companyLinkSpan = document.createElement('span');
+    companyLinkSpan.classList.add('main-cv-workhistory-span');
+
+    companyLinkDiv.append(companyLinkSpan);
+
+    const companylinkA = document.createElement('a');
+    if (workExperience.url) {
+        companylinkA.href = workExperience.url;
+        companylinkA.textContent = workExperience.url;
+    }
+    companylinkA.classList.add('main-cv-workhistory-a');
+
+    companyLinkDiv.append(companylinkA);
+
+    workExpCard.append(companyLinkDiv);
+
+    //FECHA INICIO
+    const compoanyWorkTimeLapse = document.createElement('div');
+    compoanyWorkTimeLapse.classList.add('main-cv-workhistory-timelapse');
+
     let companyStartDateDiv = document.createElement('div');
     let companyStartDateLabel = document.createElement('p');
     companyStartDateLabel.classList.add('main-cv-workhistory-card-label');
-    //companyStartDateLabel.textContent = "Fecha Incio";
     let companyStartDate = document.createElement('p');
     companyStartDate.classList.add('main-cv-workhistory-card-text');
     companyStartDate.textContent = workExperience.startDate;
 
     companyStartDateDiv.appendChild(companyStartDateLabel);
     companyStartDateDiv.appendChild(companyStartDate);
-    workExpCard.append(companyStartDateDiv);
+    
+    compoanyWorkTimeLapse.append(companyStartDateDiv);
 
+    const timelapsespan = document.createElement('span');
+    timelapsespan.classList.add('timelapse-icon');
+
+    compoanyWorkTimeLapse.append(timelapsespan);
+
+    //FECHA FIN
     let companyEndDateDiv = document.createElement('div');
     let companyEndDateLabel = document.createElement('p');
     companyEndDateLabel.classList.add('main-cv-workhistory-card-label');
-    //companyEndDateLabel.textContent = "Fecha Final";
     let companyEndDate = document.createElement('p');
     companyEndDate.classList.add('main-cv-workhistory-card-text');
     companyEndDate.textContent = workExperience.endDate;
 
     companyEndDateDiv.appendChild(companyEndDateLabel);
     companyEndDateDiv.appendChild(companyEndDate);
-    workExpCard.append(companyEndDateDiv);
 
+    compoanyWorkTimeLapse.append(companyEndDateDiv);
+
+    workExpCard.append(compoanyWorkTimeLapse);
+
+    //LISTADO
+    const buttonContent = document.createElement('button');
+    buttonContent.textContent = "Funciones";
+    buttonContent.classList.add('main-cv-workhistory-button');
+    buttonContent.classList.add('collapsible');
+    buttonContent.addEventListener('click', collapsibleClickfunction);
+
+    workExpCard.appendChild(buttonContent);
+
+    const collapsibleWorkHistory = document.createElement('div');
+    collapsibleWorkHistory.classList.add('content')
+
+    
 
     let functionsList = document.createElement('ul');
-    functionsList.textContent = "Funciones"
+    //functionsList.textContent = "Funciones"
     functionsList.classList.add('main-cv-workhistory-list');
+    
 
     workExperience.functions.forEach(exp => {
         const elem = document.createElement('li');
@@ -185,8 +232,8 @@ function setWorkExperienceCard(workExperience){
         functionsList.appendChild(elem);
     });
 
-    workExpCard.appendChild(functionsList);
-
+    collapsibleWorkHistory.appendChild(functionsList);
+    workExpCard.appendChild(collapsibleWorkHistory);
     return workExpCard;
 
 
@@ -219,6 +266,18 @@ async function loadLanguage()
     return dicto;
 
 }
+
+
+function collapsibleClickfunction() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  }
+
 
 
 class PersonalInfo {
