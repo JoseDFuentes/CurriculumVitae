@@ -195,7 +195,7 @@ function setWorkExperienceCard(workExperience){
     let companyStartDateDiv = document.createElement('div');
     companyStartDateDiv.classList.add('main-cv-workhistory-card--container');
     let companyStartDateSpan = document.createElement('span');
-    companyStartDateSpan.classList.add('main-cv-workhistory-card-startdate-icon')
+    //companyStartDateSpan.classList.add('main-cv-workhistory-card-startdate-icon')
     let companyStartDateLabel = document.createElement('p');
     companyStartDateLabel.classList.add('main-cv-workhistory-card-label');
     let companyStartDate = document.createElement('p');
@@ -217,7 +217,7 @@ function setWorkExperienceCard(workExperience){
     let companyEndDateDiv = document.createElement('div');
     companyEndDateDiv.classList.add('main-cv-workhistory-card--container');
     let companyEndDateSpan = document.createElement('span');
-    companyEndDateSpan.classList.add('main-cv-workhistory-card-enddate-icon')
+    //companyEndDateSpan.classList.add('main-cv-workhistory-card-enddate-icon')
     let companyEndDateLabel = document.createElement('p');
     companyEndDateLabel.classList.add('main-cv-workhistory-card-label');
     let companyEndDate = document.createElement('p');
