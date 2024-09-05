@@ -15,6 +15,8 @@ let profesionalTechs = document.querySelector('.main-cv-profesional-techs')
 
 let workHistoryContainer = document.querySelector('.main-cv-workhistory--container');
 
+let personalInformationButton = document.querySelector('.main-cv-personal--title');
+
 let selected_language = 'es';
 
 let personalInfo;
@@ -27,6 +29,10 @@ let listWorkExperience = [];
 
 document.addEventListener('DOMContentLoaded', setData);
 
+personalInformationButton.addEventListener('click', expandCollapseButton);
+
+
+
 async function setData() {
 
     await loadJSON();
@@ -36,6 +42,18 @@ async function setData() {
     setWorkExperience();
 }
 
+
+function expandCollapseButton()
+{
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+}
 
 function setPersonalInfoData(){
 
@@ -175,6 +193,9 @@ function setWorkExperienceCard(workExperience){
     compoanyWorkTimeLapse.classList.add('main-cv-workhistory-timelapse');
 
     let companyStartDateDiv = document.createElement('div');
+    companyStartDateDiv.classList.add('main-cv-workhistory-card--container');
+    let companyStartDateSpan = document.createElement('span');
+    companyStartDateSpan.classList.add('main-cv-workhistory-card-startdate-icon')
     let companyStartDateLabel = document.createElement('p');
     companyStartDateLabel.classList.add('main-cv-workhistory-card-label');
     let companyStartDate = document.createElement('p');
@@ -182,6 +203,7 @@ function setWorkExperienceCard(workExperience){
     companyStartDate.textContent = workExperience.startDate;
 
     companyStartDateDiv.appendChild(companyStartDateLabel);
+    companyStartDateDiv.appendChild(companyStartDateSpan);
     companyStartDateDiv.appendChild(companyStartDate);
     
     compoanyWorkTimeLapse.append(companyStartDateDiv);
@@ -193,6 +215,9 @@ function setWorkExperienceCard(workExperience){
 
     //FECHA FIN
     let companyEndDateDiv = document.createElement('div');
+    companyEndDateDiv.classList.add('main-cv-workhistory-card--container');
+    let companyEndDateSpan = document.createElement('span');
+    companyEndDateSpan.classList.add('main-cv-workhistory-card-enddate-icon')
     let companyEndDateLabel = document.createElement('p');
     companyEndDateLabel.classList.add('main-cv-workhistory-card-label');
     let companyEndDate = document.createElement('p');
@@ -200,6 +225,7 @@ function setWorkExperienceCard(workExperience){
     companyEndDate.textContent = workExperience.endDate;
 
     companyEndDateDiv.appendChild(companyEndDateLabel);
+    companyEndDateDiv.appendChild(companyEndDateSpan);
     companyEndDateDiv.appendChild(companyEndDate);
 
     compoanyWorkTimeLapse.append(companyEndDateDiv);

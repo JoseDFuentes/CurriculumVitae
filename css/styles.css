@@ -87,6 +87,10 @@ main {
     padding-left: 15px;
     background-color: var(--dark-blue);
     color: var(--white);
+    cursor: pointer;
+    border: none;
+    outline: nones;
+    vertical-align: middle;
 }
 
 .main-cv-personal--container {
@@ -100,10 +104,13 @@ main {
 
 .main-cv-personal--label {
     line-height: 2.6rem;
+    padding-left: 10px;
 }
 
 .main-cv-personal--value {
     line-height: 2rem;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
 .main-cv-personal--label {
@@ -247,9 +254,40 @@ main {
     line-height: 3rem;
 }
 
+
+.main-cv-workhistory-card--container {
+    display: flex;
+}
+
+.main-cv-workhistory-card-startdate-icon {
+    height: 40px;
+    width: 40px;
+    background-image: url('../assets/icons/start-date-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+.main-cv-workhistory-card-enddate-icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url('../assets/icons/end-date-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+
+}
+
+
 .main-cv-workhistory-card-text {
     font-weight: 500;
     line-height: 3rem;
+    padding-left: 20px;
 }
 
 .main-cv-workhistory-header {
