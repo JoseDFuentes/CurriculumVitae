@@ -27,6 +27,8 @@ let profesionalProfile;
 let dictoLanguage = {};
 let listWorkExperience = [];
 
+let Labels;
+
 document.addEventListener('DOMContentLoaded', setData);
 
 personalInformationButton.addEventListener('click', expandCollapseButton);
@@ -36,6 +38,7 @@ personalInformationButton.addEventListener('click', expandCollapseButton);
 async function setData() {
 
     await loadJSON();
+    Labels = await loadJSONLanguage();
     dictoLanguage = await loadLanguage();
     setPersonalInfoData();
     setProfesionalData();
@@ -94,6 +97,27 @@ function setWorkExperience(){
     });
 }
 
+async function loadJSONLanguage() {
+    let fileName = '';
+    switch(selected_language){
+        case 'es': fileName = './information/label_file_es.json'; break;
+    }
+
+    const Labels = await fetch(fileName) 
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Error al cargar archivo de información');
+            }
+            let data = response.json();
+            console.log(data);
+            return data;
+        });
+    
+        return Labels;
+
+
+
+}
 
 async function loadJSON() {
     let fileName = '';
@@ -236,6 +260,24 @@ function setWorkExperienceCard(workExperience){
 
     workExpCard.append(compoanyWorkTimeLapse);
 
+    //CALCULO TIEMPO
+    const timeRange = document.createElement('p');
+
+    const endDate = workExperience.endDate === '-' ? new Date().toISOString().split('T')[0] : workExperience.endDate;
+
+    const timeRangeResult = calculateYearsAndMonths(workExperience.startDate, endDate);
+
+    let rangeTextContent = `${timeRangeResult.years} ${Labels.Years}`;
+
+    if (timeRangeResult.months > 0)
+    {
+        rangeTextContent += ` ${timeRangeResult.months} ${Labels.Months}`;
+    }
+
+    timeRange.textContent = rangeTextContent;
+
+    workExpCard.append(timeRange);
+
     //LISTADO
     const buttonContent = document.createElement('button');
     buttonContent.textContent = "Funciones";
@@ -268,6 +310,25 @@ function setWorkExperienceCard(workExperience){
 
 
 }
+
+function calculateYearsAndMonths(startDate, endDate) {
+    let start = new Date(startDate);
+    let end = new Date(endDate);
+
+    let years = end.getFullYear() - start.getFullYear();
+    let months = end.getMonth() - start.getMonth();
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    return {
+        years: years,
+        months: months
+    };
+}
+
 
 async function loadLanguage()
 {

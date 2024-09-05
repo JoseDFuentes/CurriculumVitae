@@ -2,7 +2,9 @@
     background-color:#061B2A;
     color: #BEE0F8;
     cursor: pointer;
-    padding: 18px;
+    /*padding: 2px;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     border: none;
     text-align: left;
