@@ -169,25 +169,29 @@ function setWorkExperienceCard(workExperience){
 
     //LINK
 
-    const companyLinkDiv = document.createElement('div');
-    companyLinkDiv.classList.add('main-cv-workhistory-linkDiv');
-
-    const companyLinkSpan = document.createElement('span');
-    companyLinkSpan.classList.add('main-cv-workhistory-span');
-
-    companyLinkDiv.append(companyLinkSpan);
-
-    const companylinkA = document.createElement('a');
+   
     if (workExperience.url) {
+        const companyLinkDiv = document.createElement('div');
+        companyLinkDiv.classList.add('main-cv-workhistory-linkDiv');
+    
+        
+    
+        const companylinkA = document.createElement('a');
+        const companyLinkSpan = document.createElement('span');
+        companyLinkSpan.classList.add('main-cv-workhistory-span');
+
+        companyLinkDiv.append(companyLinkSpan);
+
         companylinkA.href = workExperience.url;
         companylinkA.textContent = workExperience.url;
+        companylinkA.classList.add('main-cv-workhistory-a');
+
+        companyLinkDiv.append(companylinkA);
+    
+        workExpCard.append(companyLinkDiv);
+    
     }
-    companylinkA.classList.add('main-cv-workhistory-a');
-
-    companyLinkDiv.append(companylinkA);
-
-    workExpCard.append(companyLinkDiv);
-
+   
     //FECHA INICIO
     const compoanyWorkTimeLapse = document.createElement('div');
     compoanyWorkTimeLapse.classList.add('main-cv-workhistory-timelapse');

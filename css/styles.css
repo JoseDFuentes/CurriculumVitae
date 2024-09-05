@@ -227,13 +227,14 @@ main {
 .main-cv-workhistory-linkDiv {
     display: flex;
     flex-wrap: wrap;
-    height: 40px
+    height: 40px;
+    margin-top: 5px;    
 }
 
 .main-cv-workhistory-span {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 0px 10px;
     background-image: url('../assets/icons/link-icon.png');
     background-size: contain;
