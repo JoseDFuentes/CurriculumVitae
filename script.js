@@ -51,6 +51,7 @@ async function setData() {
     SetCertifications();
     SetCourses();
     SetAdditionals();
+    SetFooterLabels();
 }
 
 
@@ -430,6 +431,14 @@ function SetAdditional(Additional) {
 
     return row;
 
+}
+
+function SetFooterLabels() {
+    const linkedInA = document.querySelector('#linkedInA');
+    linkedInA.textContent = Labels.LinkedIn;
+
+    const repositoryA = document.querySelector('#RepositoryA');
+    repositoryA.textContent = Labels.Repository;
 }
 
 

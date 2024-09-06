@@ -437,3 +437,57 @@ main {
     
 }
 
+/*----FOOTER-------*/
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: var(--dark-blue-1);
+}
+
+footer section {
+    display: flex;
+    width: 90%;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+
+footer .left ul{
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 0.8rem;
+    list-style-type: none;
+}
+
+.left li {
+    margin: 10px 0;
+    
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--white);
+    margin-top: 5px;
+}
+
+footer section div {
+    display: flex;
+}
+
+footer span {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#linkedInIcon {
+    background-image: url('../assets/icons/linkedin-icon.png');    
+}
+
+#githubIcon {
+    background-image: url('../assets/icons/github-icon.png');    
+}
