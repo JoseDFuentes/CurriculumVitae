@@ -17,7 +17,7 @@ let workHistoryContainer = document.querySelector('.main-cv-workhistory--contain
 
 let personalInformation = document.querySelector('.main-cv-personal--title');
 
-let selected_language = 'es';
+let selected_language = 'en';
 
 let personalInfo;
 let profesionalProfile;
@@ -113,6 +113,7 @@ async function loadJSONLanguage() {
     let fileName = '';
     switch(selected_language){
         case 'es': fileName = './information/label_file_es.json'; break;
+        case 'en': fileName = './information/label_file_en.json'; break;
     }
 
     const Labels = await fetch(fileName) 
@@ -136,6 +137,7 @@ async function loadJSON() {
 
     switch(selected_language){
         case 'es': fileName = './information/info_spanish.json'; break;
+        case 'en': fileName = './information/info_english.json'; break;
     }
     
 
@@ -571,7 +573,7 @@ function setWorkExperienceCard(workExperience){
 
     //LISTADO
     const buttonContent = document.createElement('button');
-    buttonContent.textContent = "Funciones";
+    buttonContent.textContent = Labels.Activities;
     buttonContent.classList.add('main-cv-workhistory-button');
     buttonContent.classList.add('collapsible');
     buttonContent.addEventListener('click', collapsibleClickfunction);

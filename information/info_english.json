@@ -1,0 +1,203 @@
+{
+    "personalInfo": {
+        "name": "Jose Daniel Fuentes López",
+        "title": "Systems, Computer Science, and Computing Engineer",
+        "phone": "+502 5238 6656",
+        "email": "josedfuentesl@hotmail.com",
+        "ResidenceCountry": "Guatemala"
+    },
+    "profesionalProfile": {
+        "summary": "Software engineer focused on the following languages and technologies",
+        "techs": [
+            "Visual Studio .NET (VB & C#)",
+            "Microsoft Dynamics 365 for Finance and Operations",
+            "Microsoft Dynamics 365 Cloud POS",
+            "Microsoft Dynamics 365 Store Commerce",
+            "Microsoft Dynamics AX 2012 Retail POS",
+            "Azure DevOps",
+            "Microsoft Dynamics CRM .NET SDK",
+            "Microsoft Dynamics CRM Plugins", 
+            "Microsoft Dynamics CRM Reports",
+            "Microsoft Dynamics AX 2009 – 2012",
+            "Transact SQL",
+            "Microsoft SQL Server",
+            "Microsoft SQL Reporting Services",
+            "Microsoft SQL Analysis Services",
+            "Microsoft SQL Integration Service", 
+            "Microsoft Power BI",
+            "Targit Business Intelligence",
+            "JavaScript"
+        ]
+    },
+    "workHistory": [
+        {
+            "company": "Alfapeople Central America",
+            "url": "https://alfapeople.com/latam/",
+            "position": "Technical Solution Architect",
+            "startDate": "2022-12-01",
+            "endDate": "-",
+            "functions": [
+                "Participation in the analysis, design, and architecture of developments, both internal and for clients",
+                "Ensuring the quality of developments delivered to internal or external clients",
+                "Ensuring compliance with internal development procedures",
+                "Estimation and/or validation of development estimates",
+                "Supporting project activities requested by project managers to validate the requirements of each project",
+                "Supporting the analysis and definition of environments required by the client and the ongoing project to ensure the stability and quality of the solution",
+                "Validating that functional designs have technical feasibility and making necessary recommendations to improve the proposed design",
+                "Participating in the review of gaps, their definition, and scope, as requested by the project manager and/or functional architect",
+                "Providing technical support in project pre-sales, analyzing and proposing efficient and viable solutions for the client",
+                "Collaborating in the design of environments required by the project",
+                "Contributing to the definition of the project scope",
+                "Drafting scope documents for each technical requirement and/or development required in the projects"
+            ]
+        },
+        {
+            "company": "Alfapeople Central America",
+            "url": "https://alfapeople.com/latam/",
+            "position": "Development Engineer",
+            "startDate": "2014-04-01",
+            "endDate": "2022-11-30",
+            "functions": [
+                "Design and development of solutions in Dynamics 365 for Finance and Operations",
+                "Design and development of solutions in Dynamics AX 2012",
+                "Support for solutions in Dynamics AX 2009",
+                "Development of solutions for the extension of Dynamics AX 2012 point of sale",
+                "Development of system integration solutions using the Dynamics CRM .NET SDK",
+                "Development of functional and integration solutions through plugin development in Dynamics CRM",
+                "Development of integrations using AIF Services for Dynamics AX 2012",
+                "Development of integrations using REST Custom Services API for Dynamics 365 F&O",
+                "Development of integrations using SOAP ASP Web Services",
+                "Development of integrations using .NET Core REST APIs",
+                "Development of solutions and interfaces based on C#.Net",
+                "Development and certification process for the Microsoft Marketplace of verticals and fiscal layers developed in Dynamics 365 F&O",
+                "Configuring and managing version control projects for development projects using Azure DevOps"
+            ]
+        },
+        {
+            "company": "Gyssa",
+            "url": "https://www.gyssa.com/",
+            "position": "AX/.Net Programmer",
+            "startDate": "2012-10-01",
+            "endDate": "2014-03-30",
+            "functions": [
+                "Support for solutions in Dynamics AX 2009",
+                "Development and support for solutions in Dynamics AX 2012",
+                "Development and support for ERP solutions based on .NET, SPC 5+"
+            ]
+        },
+        {
+            "company": "Software and Business Consulting",
+            "url": "",
+            "position": "Programmer",
+            "startDate": "2008-06-15",
+            "endDate": "2012-09-30",
+            "functions": [
+                "Development of solutions based on ADO.NET and SQLServer"
+            ]
+        }
+    ],
+    "educationProfile": {
+        "titles": [
+            {
+                "institution": "Mesoamerican University Quetzaltenango Extension",
+                "url": "https://www.mesoamericana.edu.gt/",
+                "graduationYear": "2011",
+                "degree": "Systems, Computer Science, and Computing Engineer"
+            }
+        ],
+        "Courses": [
+            {
+                "name": "Targit Business Intelligence",
+                "entity": "Targit partner",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Web APIs with .NET Core 6",
+                "entity": "Udemy",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Version Control Git/Github",
+                "entity": "Udemy",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Modern JavaScript",
+                "entity": "Udemy",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Power BI",
+                "entity": "Udemy",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Python Course",
+                "entity": "Udemy",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Data Handling in C# with LINQ",
+                "entity": "Platzi",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Entity Framework Fundamentals",
+                "entity": "Platzi",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "APIs with .NET",
+                "entity": "Platzi",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Definitive HTML and CSS Course",
+                "entity": "Platzi",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Responsive Design: Mobile First Layout",
+                "entity": "Platzi",
+                "url": "",
+                "notes": ""
+            },
+            {
+                "name": "Introduction to Cloud with Azure",
+                "entity": "Platzi",
+                "url": "",
+                "notes": ""
+            }
+        ],
+        "Certifications": [
+            {
+                "name": "Microsoft Dynamics AX 2012 Development Introduction",
+                "entity": "Microsoft",
+                "notes": ""
+            },
+            {
+                "name": "Dynamics 365 Finance and Operations Apps Developer",
+                "entity": "Microsoft",
+                "notes": ""
+            },
+            {
+                "name": "Targit Certified Professional",
+                "entity": "Targit partner",
+                "notes": ""
+            }
+        ],
+        "Additional": [
+            "Highest CEFR English level achieved: B2"
+        ]
+    }
+}
