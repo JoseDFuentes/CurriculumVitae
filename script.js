@@ -15,7 +15,7 @@ let profesionalTechs = document.querySelector('.main-cv-profesional-techs')
 
 let workHistoryContainer = document.querySelector('.main-cv-workhistory--container');
 
-let personalInformationButton = document.querySelector('.main-cv-personal--title');
+let personalInformation = document.querySelector('.main-cv-personal--title');
 
 let selected_language = 'es';
 
@@ -35,15 +35,11 @@ let Labels;
 
 document.addEventListener('DOMContentLoaded', setData);
 
-personalInformationButton.addEventListener('click', expandCollapseButton);
-
-
-
 async function setData() {
-
-    await loadJSON();
     Labels = await loadJSONLanguage();
-    dictoLanguage = await loadLanguage();
+    await loadJSON();
+    
+    
     setPersonalInfoData();
     setProfesionalData();
     setWorkExperience();
@@ -69,15 +65,14 @@ function expandCollapseButton()
 
 function setPersonalInfoData(){
 
-    let phonestr = dictoLanguage["phone"];
-/*
-    personalInfo_name_label.textContent = dictoLanguage["name"];
-    personalInfo_phone_label.textContent =  dictoLanguage["phone"];
-    personalInfo_email_label.textContent = dictoLanguage["email"];
-    personalInfo_title_label.textContent = dictoLanguage["title"];
-    personalInfo_country_label.textContent = dictoLanguage["country"];
+    personalInformation.textContent = Labels.PersonalInformation;
+    personalInfo_name_label.textContent = Labels.Name;
+    personalInfo_phone_label.textContent =  Labels.Phone;
+    personalInfo_email_label.textContent = Labels.Email;
+    personalInfo_title_label.textContent = Labels.Profesion;
+    personalInfo_country_label.textContent = Labels.ResidenceCountry;
 
-  */  
+  
     personalInfo_name.textContent = personalInfo.name;
     personalInfo_phone.textContent =  personalInfo.phone;
     personalInfo_email.textContent = personalInfo.email;
@@ -87,6 +82,10 @@ function setPersonalInfoData(){
 }
 
 function setProfesionalData(){
+
+    const profesionalProfileTitle = document.querySelector('.main-cv-profesional--title');
+    profesionalProfileTitle.textContent = Labels.ProfesionalProfile;
+
     profesionalSummary.textContent = profesionalProfile.summary;
 
     profesionalProfile.techs.forEach(tech => {
@@ -100,6 +99,10 @@ function setProfesionalData(){
 }
 
 function setWorkExperience(){
+
+    const workExperienceTitle = document.querySelector('.main-cv-workhistory--title');
+    workExperienceTitle.textContent = Labels.WorkExperience;
+
     listWorkExperience.forEach(workExperience => {
         const workExpCard = setWorkExperienceCard(workExperience);
         workHistoryContainer.appendChild(workExpCard);
@@ -175,6 +178,9 @@ async function loadJSON() {
 }
 
 function setEducation() {
+    const educationTitle = document.querySelector('.main-cv-education--title');
+    educationTitle.textContent = Labels.Education;
+
    SetUniversity(titles);
 }
 

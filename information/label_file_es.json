@@ -14,5 +14,14 @@
     "OtherSkills": "Otras habilidades",
     "LinkedIn": "LinkedIn",
     "Project": "Proyecto",
-    "Repository": "Repositorio"
+    "Repository": "Repositorio",
+    "PersonalInformation": "Información personal",
+    "Name": "Nombre",
+    "Profesion": "Profesión",
+    "Phone": "Teléfono",
+    "Email": "Correo electrónico",
+    "ResidenceCountry": "País de residencia",
+    "ProfesionalProfile": "Perfil profesional",
+    "WorkExperience": "Experiencia laboral",
+    "Education": "Educación"
 }
