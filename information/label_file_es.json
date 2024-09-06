@@ -2,5 +2,14 @@
     "Year": "año",
     "Years": "años",
     "Month": "mes",
-    "Months": "meses"
+    "Months": "meses",
+    "GraduationYear": "Año de graduación",
+    "University": "Universidad",
+    "Certifications": "Certificaciones",
+    "Certification": "Certificación",
+    "Institution": "Institución",
+    "Courses": "Cursos",
+    "Course": "Curso",
+    "Entity": "Entidad",
+    "OtherSkills": "Otras habilidades"
 }

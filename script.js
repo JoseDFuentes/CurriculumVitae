@@ -21,11 +21,15 @@ let selected_language = 'es';
 
 let personalInfo;
 let profesionalProfile;
-
+let educationProfile;
 
 
 let dictoLanguage = {};
 let listWorkExperience = [];
+let titles = [];
+let certifications = [];
+let courses = [];
+let aditionalEducation = [];
 
 let Labels;
 
@@ -43,6 +47,10 @@ async function setData() {
     setPersonalInfoData();
     setProfesionalData();
     setWorkExperience();
+    setEducation();
+    SetCertifications();
+    SetCourses();
+    SetAdditionals();
 }
 
 
@@ -109,7 +117,7 @@ async function loadJSONLanguage() {
                 throw new Error('Error al cargar archivo de información');
             }
             let data = response.json();
-            console.log(data);
+            
             return data;
         });
     
@@ -133,12 +141,10 @@ async function loadJSON() {
                 throw new Error('Error al cargar archivo de información');
             }
             let data = response.json();
-            
             return data;
         })
         .then(data => {
 
-            console.log(data);
 
             if (data.hasOwnProperty('personalInfo')) {
                 personalInfo = new PersonalInfo(data.personalInfo);
@@ -151,12 +157,282 @@ async function loadJSON() {
                     listWorkExperience = [...listWorkExperience, new WorkExperience(company)];
                 });
             }
+            if (data.hasOwnProperty('educationProfile')) {
+                educationProfile = new EducationProfile(data.educationProfile);
+                titles = educationProfile.titles;
+                certifications = educationProfile.Certifications;
+                courses = educationProfile.Courses;
+                aditionalEducation = educationProfile.Additional;
+            }
+            
+
 
         })
         .catch(function(error) {
             console.error('Error:', error);
         });
 }
+
+function setEducation() {
+   SetUniversity(titles);
+}
+
+
+function SetUniversity(titles) {
+    const universitySection = document.querySelector('.main-cv-education-university--container');
+
+    const universityTitle = document.createElement('p');
+    universityTitle.classList.add('main-cv-education-section-title');
+    universityTitle.textContent = Labels.University;
+    universitySection.append(universityTitle);
+
+    console.log(universitySection);
+    titles.forEach(title => {
+        const universityCard = SetUniversityTitle(title);
+        universitySection.append(universityCard);
+    });
+
+    
+
+
+}
+
+
+function SetUniversityTitle(Title) {
+    const universityCard = document.createElement('div');
+    universityCard.classList.add('main-cv-education-uni-card');
+
+    const degreeP = document.createElement('p');
+    degreeP.classList.add('main-cv-education-uni-degree');
+    degreeP.textContent = Title.degree;
+
+    universityCard.append(degreeP);
+
+    const institutionP = document.createElement('p');
+    institutionP.classList.add('main-cv-education-uni-name');
+    institutionP.textContent = Title.institution;
+
+    universityCard.append(institutionP);
+
+    const yearP = document.createElement('p');
+    yearP.classList.add('main-cv-education-uni-year');
+    yearP.textContent = `${Labels.GraduationYear} ${Title.graduationYear}`;
+
+    universityCard.append(yearP)
+
+    if (Title.url) {
+        const instURLDiv = document.createElement('div');
+        instURLDiv.classList.add('main-cv-link-div');
+
+        const instUrlSpan = document.createElement('span');
+        instUrlSpan.classList.add('main-cv-link-span');
+
+        instURLDiv.append(instUrlSpan);
+
+        const instUrl = document.createElement('a');
+        instUrl.classList.add('main-cv-link-a');
+        instUrl.href = Title.url;
+        instUrl.textContent = Title.url;
+
+        instURLDiv.append(instUrl);
+
+        universityCard.append(instURLDiv);
+    }
+
+
+    return universityCard;
+}
+
+function SetCertifications() {
+
+    const certificationsContainer = document.querySelector('.main-cv-education-certifications--container');
+    
+    const certificationTitle = document.createElement('p');
+    certificationTitle.classList.add('main-cv-education-section-title');
+    certificationTitle.textContent = Labels.Certifications;
+    certificationsContainer.append(certificationTitle);
+
+    const certTable = setCertificationTableHeader();
+
+    certifications.forEach(certification => {
+        const certRow = SetCertification(certification);
+        certTable.append(certRow);
+    })
+
+
+    certificationsContainer.append(certTable);
+
+}
+
+function setCertificationTableHeader() {
+    const certTable = document.createElement('div');
+    certTable.classList.add('div-table');
+    
+    const headerRow = document.createElement('div');
+    headerRow.classList.add('div-row');
+
+    const headerCert = document.createElement('div');
+    headerCert.classList.add('div-cell-large');
+    headerCert.classList.add('div-header');
+    headerCert.textContent = Labels.Certification;
+
+    const headerInst = document.createElement('div');
+    headerInst.classList.add('div-cell-mid');
+    headerInst.classList.add('div-header');
+    headerInst.textContent = Labels.Institution;
+
+    headerRow.append(headerCert);
+    headerRow.append(headerInst);
+
+    certTable.append(headerRow);
+
+    return certTable;
+
+}
+
+function SetCertification(certification) {
+    const row = document.createElement('div');
+    row.classList.add('div-row');
+
+    const rowCert = document.createElement('div');
+    rowCert.classList.add('div-cell-large');
+    rowCert.textContent = certification.name;
+
+    const rowInst = document.createElement('div');
+    rowInst.classList.add('div-cell-mid');
+    rowInst.textContent = certification.entity;
+
+    row.append(rowCert);
+    row.append(rowInst);
+
+    return row;
+}
+
+function SetCourses() {
+    const coursesContainer = document.querySelector('.main-cv-education-courses--container');
+    
+    const courseTitle = document.createElement('p');
+    courseTitle.classList.add('main-cv-education-section-title');
+    courseTitle.textContent = Labels.Courses;
+    coursesContainer.append(courseTitle);
+
+    const certTable = setCoursesTableHeader();
+
+    courses.forEach(course => {
+        const certRow = SetCourse(course);
+        certTable.append(certRow);
+    })
+
+
+    coursesContainer.append(certTable);
+}
+
+function setCoursesTableHeader() {
+    const certTable = document.createElement('div');
+    certTable.classList.add('div-table');
+    
+    const headerRow = document.createElement('div');
+    headerRow.classList.add('div-row');
+
+    const headerCert = document.createElement('div');
+    headerCert.classList.add('div-cell-large');
+    headerCert.classList.add('div-header');
+    headerCert.textContent = Labels.Course;
+
+    const headerInst = document.createElement('div');
+    headerInst.classList.add('div-cell-mid');
+    headerInst.classList.add('div-header');
+    headerInst.textContent = Labels.Entity;
+
+    headerRow.append(headerCert);
+    headerRow.append(headerInst);
+
+    certTable.append(headerRow);
+
+    return certTable;
+
+}
+
+function SetCourse(course) {
+    const row = document.createElement('div');
+    row.classList.add('div-row');
+
+    const rowCert = document.createElement('div');
+    rowCert.classList.add('div-cell-large');
+    rowCert.textContent = course.name;
+
+    const rowInst = document.createElement('div');
+    rowInst.classList.add('div-cell-mid');
+    rowInst.textContent = course.entity;
+
+    row.append(rowCert);
+    row.append(rowInst);
+
+    return row;
+
+}
+
+function SetAdditionals() {
+    const AdditionalsContainer = document.querySelector('.main-cv-education-other--container');
+    
+    const AdditionalTitle = document.createElement('p');
+    AdditionalTitle.classList.add('main-cv-education-section-title');
+    AdditionalTitle.textContent = Labels.OtherSkills;
+    AdditionalsContainer.append(AdditionalTitle);
+
+    const certTable = setAdditionalsTableHeader();
+
+    aditionalEducation.forEach(Additional => {
+        const certRow = SetAdditional(Additional);
+        certTable.append(certRow);
+    })
+
+
+    AdditionalsContainer.append(certTable);
+}
+
+function setAdditionalsTableHeader() {
+    const certTable = document.createElement('div');
+    certTable.classList.add('div-table');
+   /* 
+    const headerRow = document.createElement('div');
+    headerRow.classList.add('div-row');
+
+    const headerCert = document.createElement('div');
+    headerCert.classList.add('div-cell-large');
+    headerCert.classList.add('div-header');
+    headerCert.textContent = Labels.Additional;
+
+    const headerInst = document.createElement('div');
+    headerInst.classList.add('div-cell-mid');
+    headerInst.classList.add('div-header');
+    headerInst.textContent = Labels.Entity;
+
+    headerRow.append(headerCert);
+    headerRow.append(headerInst);
+
+    certTable.append(headerRow);
+*/
+    return certTable;
+
+}
+
+function SetAdditional(Additional) {
+    const row = document.createElement('div');
+    row.classList.add('div-row');
+
+    const rowCert = document.createElement('div');
+    rowCert.classList.add('div-cell-large');
+    rowCert.textContent = Additional;
+
+    row.append(rowCert);
+   
+
+    return row;
+
+}
+
+
 
 function setWorkExperienceCard(workExperience){
     
@@ -196,19 +472,19 @@ function setWorkExperienceCard(workExperience){
    
     if (workExperience.url) {
         const companyLinkDiv = document.createElement('div');
-        companyLinkDiv.classList.add('main-cv-workhistory-linkDiv');
+        companyLinkDiv.classList.add('main-cv-link-div');
     
         
     
         const companylinkA = document.createElement('a');
         const companyLinkSpan = document.createElement('span');
-        companyLinkSpan.classList.add('main-cv-workhistory-span');
+        companyLinkSpan.classList.add('main-cv-link-span');
 
         companyLinkDiv.append(companyLinkSpan);
 
         companylinkA.href = workExperience.url;
         companylinkA.textContent = workExperience.url;
-        companylinkA.classList.add('main-cv-workhistory-a');
+        companylinkA.classList.add('main-cv-link-a');
 
         companyLinkDiv.append(companylinkA);
     

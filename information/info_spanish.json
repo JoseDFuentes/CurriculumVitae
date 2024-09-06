@@ -180,22 +180,22 @@
         ],
         "Certifications": [
             {
-                "certificationName": "Microsoft Dynamics AX 2012 Development Introduction",
+                "name": "Microsoft Dynamics AX 2012 Development Introduction",
                 "entity": "Microsoft",
                 "notes": ""
             },
             {
-                "certificationName": "Dynamics 365 Finance and Operations Apps Developer",
+                "name": "Dynamics 365 Finance and Operations Apps Developer",
                 "entity": "Microsoft",
                 "notes": ""
             },
             {
-                "certificationName": "Targit Certified Professional",
+                "name": "Targit Certified Professional",
                 "entity": "Targit partner",
                 "notes": ""
             }
         ],
-        "Addtional": [
+        "Additional": [
             "Nivel de inglés según CEFR más alto alcanzado: B2"
         ]
     }

@@ -162,6 +162,8 @@ main {
     color: var(--light-blue);
 }
 
+/*-----------WORKHISTORY-------------------------------*/
+
 .main-cv-workhistory {
     width: 100%;
     display: flex;
@@ -224,30 +226,6 @@ main {
     background-repeat: no-repeat;
 }
 
-.main-cv-workhistory-linkDiv {
-    display: flex;
-    flex-wrap: wrap;
-    height: 40px;
-    margin-top: 5px;    
-}
-
-.main-cv-workhistory-span {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0px 10px;
-    background-image: url('../assets/icons/link-icon.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.main-cv-workhistory-a {
-    text-decoration: none;
-    height: 20px;
-    color: var(--light-blue);
-}
-
 
 .main-cv-workhistory-card-company {
     font-weight: 600;
@@ -306,3 +284,156 @@ main {
     color: var(--light-blue);
     
 }
+
+/*-----------EDUCATION------------------*/
+
+.main-cv-education {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+.main-cv-education-university--container {
+    background-color: var(--dark-blue);
+}
+
+
+
+.main-cv-education--title {
+    text-align: left;
+    width: 100%;
+    height: 50;
+    font-size: 1.4rem;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-weight: 500;
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.main-cv-education-uni-card {
+    width: 90%;
+    margin: 5px auto;
+    min-width: 350px;
+    background-color: var(--dark-blue-1);
+    color: var(--white);
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.main-cv-education-uni-degree {
+    line-height: 1.4rem;
+    font-size: 1.3rem;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.main-cv-education-uni-name {
+    line-height: 1.4rem;
+    font-size: 1.2rem;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.main-cv-education-uni-year {
+    line-height: 1.4rem;
+    font-size: 1rem;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+/*----------CERTIFICATIONS--------------*/
+
+.main-cv-education-certifications--container {
+    background-color: var(--dark-blue);
+}
+
+.main-cv-education-courses--container {
+    background-color: var(--dark-blue);
+}
+
+.main-cv-education-other--container {
+    background-color: var(--dark-blue);
+}
+
+/*-------COMMON------------*/
+
+.main-cv-link-div {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 5px;    
+}
+
+
+
+.main-cv-link-a {
+    text-decoration: none;
+    height: 20px;
+    color: var(--light-blue);
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+}
+
+.main-cv-link-span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0px 10px;
+    background-image: url('../assets/icons/link-icon.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-cv-education-section-title {
+    color: var(--white);
+    height: auto;
+    margin-left: 25px;
+    font-size: 1.4rem;
+    
+}
+
+/*-----TABLES-----------*/
+
+.div-table {
+    display: block;
+    width: 90%;
+    min-width: 350px;
+    margin: 20px auto;
+    color: var(--white);
+    font-size: 0.9rem;
+    height: auto;
+    background-color: var(--dark-blue-1);
+    padding: 5px;
+
+}
+
+.div-header {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.div-row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.div-cell-large {
+    width: 200px;
+    margin: 5px 5px;
+    border-color: var(--pale-blue);
+    border-width: 5px;
+    
+}
+
+.div-cell-mid {
+    width: 100px;
+    margin: 5px 5px;
+    border-color: var(--pale-blue);
+    border-width: 5px;
+    
+}
+
