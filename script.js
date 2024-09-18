@@ -17,6 +17,8 @@ let workHistoryContainer = document.querySelector('.main-cv-workhistory--contain
 
 let personalInformation = document.querySelector('.main-cv-personal--title');
 
+let languageSelectorButton = document.querySelector('.language-selector-button');
+
 let selected_language = 'en';
 
 let personalInfo;
@@ -36,6 +38,15 @@ let Labels;
 document.addEventListener('DOMContentLoaded', setData);
 
 async function setData() {
+
+    selected_language = getParameter('lang');
+
+    if (selected_language == null){
+        selected_language = 'es';
+    }
+
+    languageSelectorButton.addEventListener('click', collapsibleClickfunction)
+
     Labels = await loadJSONLanguage();
     await loadJSON();
     
@@ -51,17 +62,6 @@ async function setData() {
 }
 
 
-function expandCollapseButton()
-{
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-
-    if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
-}
 
 function setPersonalInfoData(){
 
@@ -658,11 +658,41 @@ function collapsibleClickfunction() {
     if (content.style.maxHeight){
       content.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+        const maxHeight = (content.scrollHeight + 10);
+      content.style.maxHeight = maxHeight + "px";
     } 
   }
 
 
+
+  function getParameter(parameter) {
+    var url = window.location.href;
+    var index = url.indexOf('?');
+
+    if (index !== -1) {
+        var parametrosString = url.substring(index + 1);
+        var parametrosArray = parametrosString.split('&');
+
+        for (var i = 0; i < parametrosArray.length; i++) {
+            var parametro = parametrosArray[i].split('=');
+            var nombre = parametro[0];
+            var valor = parametro[1];
+
+            if (nombre === parameter) {
+                return valor;
+            }
+        }
+    }
+    return null;
+}
+
+
+function changeLanguage(lang) {
+    const currentUrl = window.location.href;
+    const newUrl = currentUrl.split('?')[0] + '?lang=' + lang;
+    window.location.href = newUrl;
+}
+  
 
 class PersonalInfo {
     constructor(data) {

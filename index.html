@@ -8,10 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/collapsible.css">
     <link rel="stylesheet" href="./css/styles.css">
-    
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 700px)">
 </head>
 <body>
     <header>
+        <div class="language-selector">
+            <button class="language-selector-button collapsible">Select Language</button>
+            <div class="language-content content" >
+                <div class="language-option" >
+                    <img id="es-flag" src="./assets/icons/gt.png" alt="Español" onclick="changeLanguage('es')">
+                    <p onclick="changeLanguage('es')" >Español</p>
+                </div>
+                <div class="language-option">
+                    <img id="en-flag" src="./assets/icons/us.png" alt="English" onclick="changeLanguage('en')">
+                    <p onclick="changeLanguage('en')">English</p>
+                </div>
+            </div>
+        </div>
         <div class="header-container">
             <img class="main-cv-profile-pic" src="./assets/img/cv-profile.jpg" alt="Imagen de perfil">
             <div class="header-title">

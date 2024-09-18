@@ -23,7 +23,7 @@ html {
 
 header {
     position: relative;
-    display: flex;
+    display: inline-block;
     /*justify-content: center;*/
     width: 100%;
     min-width: 320px;
@@ -146,13 +146,13 @@ main {
 }
 
 .main-cv-profesional--container {
-    width: 90%;
+    width: 95%;
     height: auto;
     justify-content: center;
     align-items: center;
     padding: 20px 10px 20px;
     background-color: var(--dark-blue-1);
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 5px auto;
 }
 
@@ -208,7 +208,7 @@ main {
     width: 100%;
     height: auto;
     justify-content: center;
-    padding: 20px 10px 20px;
+    padding: 0px 10px 20px 10px;
     background-color: var(--dark-blue);
 }
 
@@ -218,16 +218,16 @@ main {
 }
 
 .main-cv-workhistory-card {
-    width: 350px;
+    width: 95%;
     height: auto;
     font-size: 1.7rem;
     background-color: var(--dark-blue-1);
     margin: 10px auto;
     min-width: 160px;
-    max-width: 360px;
+    
     padding: 10px 10px;
     color: var(--white);
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .main-cv-workhistory-timelapse {
@@ -334,7 +334,7 @@ main {
 }
 
 .main-cv-education-uni-card {
-    width: 90%;
+    width: 95%;
     margin: 5px auto;
     min-width: 350px;
     background-color: var(--dark-blue-1);
@@ -420,7 +420,7 @@ main {
 
 .div-table {
     display: block;
-    width: 90%;
+    width: 95%;
     min-width: 350px;
     margin: 20px auto;
     color: var(--white);
@@ -513,3 +513,41 @@ footer span {
 #githubIcon {
     background-image: url('../assets/icons/github-icon.png');    
 }
+
+/*-----language selector ------*/
+
+.language-selector {
+    display: inline;
+    justify-content: flex-end;
+    width: auto;
+    height: auto;
+}
+
+.language-selector-button {
+    font-size: 2rem;
+    padding: 5px 5px;
+}
+  
+.language-content {
+    background-color: var(--dark-blue-1);
+    height: 35px;
+  }
+
+  .language-option {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px, 5px;
+    cursor: pointer;
+  }
+
+  .language-selector img {
+    width: 25px;
+    height: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .language-selector img:hover {
+    transform: scale(1.1);
+  }
