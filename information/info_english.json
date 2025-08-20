@@ -1,7 +1,7 @@
 {
     "personalInfo": {
         "name": "Jose Daniel Fuentes López",
-        "title": "Systems, Computer Science, and Computing Engineer",
+        "title": "Computer Science Engineer",
         "phone": "+502 5238 6656",
         "email": "josedfuentesl@hotmail.com",
         "ResidenceCountry": "Guatemala"
@@ -102,7 +102,7 @@
                 "institution": "Mesoamerican University Quetzaltenango Extension",
                 "url": "https://www.mesoamericana.edu.gt/",
                 "graduationYear": "2011",
-                "degree": "Systems, Computer Science, and Computing Engineer"
+                "degree": "Computer Science Engineer"
             }
         ],
         "Courses": [
