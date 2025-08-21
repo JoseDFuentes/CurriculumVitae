@@ -4,11 +4,11 @@
         "title": "Computer Science Engineer",
         "phone": "+502 5238 6656",
         "email": "josedfuentesl@hotmail.com",
-        "ResidenceCountry": "Guatemala"
+        "residenceCountry": "Guatemala"
     },
-    "profesionalProfile": {
-        "summary": "Software engineer focused on the following languages and technologies",
-        "techs": [
+    "professionalProfile": {
+        "summary": "Software engineer focused on the following languages and technologies:",
+        "technologies": [
             "Visual Studio .NET (VB & C#)",
             "Microsoft Dynamics 365 for Finance and Operations",
             "Microsoft Dynamics 365 Cloud POS",
@@ -19,11 +19,11 @@
             "Microsoft Dynamics CRM Plugins", 
             "Microsoft Dynamics CRM Reports",
             "Microsoft Dynamics AX 2009 – 2012",
-            "Transact SQL",
+            "Transact-SQL",
             "Microsoft SQL Server",
             "Microsoft SQL Reporting Services",
             "Microsoft SQL Analysis Services",
-            "Microsoft SQL Integration Service", 
+            "Microsoft SQL Integration Services", 
             "Microsoft Power BI",
             "Targit Business Intelligence",
             "JavaScript"
@@ -35,20 +35,20 @@
             "url": "https://alfapeople.com/latam/",
             "position": "Technical Solution Architect",
             "startDate": "2022-12-01",
-            "endDate": "-",
+            "endDate": "Present",
             "functions": [
-                "Participation in the analysis, design, and architecture of developments, both internal and for clients",
-                "Ensuring the quality of developments delivered to internal or external clients",
-                "Ensuring compliance with internal development procedures",
-                "Estimation and/or validation of development estimates",
-                "Supporting project activities requested by project managers to validate the requirements of each project",
-                "Supporting the analysis and definition of environments required by the client and the ongoing project to ensure the stability and quality of the solution",
-                "Validating that functional designs have technical feasibility and making necessary recommendations to improve the proposed design",
-                "Participating in the review of gaps, their definition, and scope, as requested by the project manager and/or functional architect",
-                "Providing technical support in project pre-sales, analyzing and proposing efficient and viable solutions for the client",
-                "Collaborating in the design of environments required by the project",
-                "Contributing to the definition of the project scope",
-                "Drafting scope documents for each technical requirement and/or development required in the projects"
+                "Participate in the analysis, design, and architecture of developments, both internal and for clients",
+                "Ensure the quality of developments delivered to internal or external clients",
+                "Ensure compliance with internal development procedures",
+                "Estimate and/or validate development estimates",
+                "Support project activities requested by project managers to validate the requirements of each project",
+                "Support the analysis and definition of environments required by the client and the ongoing project to ensure the stability and quality of the solution",
+                "Validate that functional designs have technical feasibility and make necessary recommendations to improve the proposed design",
+                "Participate in the review of gaps, their definition, and scope, as requested by the project manager and/or functional architect",
+                "Provide technical support in project pre-sales, analyzing and proposing efficient and viable solutions for the client",
+                "Collaborate in the design of environments required by the project",
+                "Contribute to the definition of the project scope",
+                "Draft scope documents for each technical requirement and/or development required in the projects"
             ]
         },
         {
@@ -58,31 +58,31 @@
             "startDate": "2014-04-01",
             "endDate": "2022-11-30",
             "functions": [
-                "Design and development of solutions in Dynamics 365 for Finance and Operations",
-                "Design and development of solutions in Dynamics AX 2012",
-                "Support for solutions in Dynamics AX 2009",
-                "Development of solutions for the extension of Dynamics AX 2012 point of sale",
-                "Development of system integration solutions using the Dynamics CRM .NET SDK",
-                "Development of functional and integration solutions through plugin development in Dynamics CRM",
-                "Development of integrations using AIF Services for Dynamics AX 2012",
-                "Development of integrations using REST Custom Services API for Dynamics 365 F&O",
-                "Development of integrations using SOAP ASP Web Services",
-                "Development of integrations using .NET Core REST APIs",
-                "Development of solutions and interfaces based on C#.Net",
-                "Development and certification process for the Microsoft Marketplace of verticals and fiscal layers developed in Dynamics 365 F&O",
-                "Configuring and managing version control projects for development projects using Azure DevOps"
+                "Design and develop solutions in Dynamics 365 for Finance and Operations",
+                "Design and develop solutions in Dynamics AX 2012",
+                "Provide support for solutions in Dynamics AX 2009",
+                "Develop solutions for the extension of Dynamics AX 2012 point of sale",
+                "Develop system integration solutions using the Dynamics CRM .NET SDK",
+                "Develop functional and integration solutions through plugin development in Dynamics CRM",
+                "Develop integrations using AIF Services for Dynamics AX 2012",
+                "Develop integrations using REST Custom Services API for Dynamics 365 F&O",
+                "Develop integrations using SOAP ASP Web Services",
+                "Develop integrations using .NET Core REST APIs",
+                "Develop solutions and interfaces based on C#.NET",
+                "Handle development and certification process for the Microsoft Marketplace of verticals and fiscal layers developed in Dynamics 365 F&O",
+                "Configure and manage version control projects for development projects using Azure DevOps"
             ]
         },
         {
             "company": "Gyssa",
             "url": "https://www.gyssa.com/",
-            "position": "AX/.Net Programmer",
+            "position": "AX/.NET Programmer",
             "startDate": "2012-10-01",
             "endDate": "2014-03-30",
             "functions": [
-                "Support for solutions in Dynamics AX 2009",
-                "Development and support for solutions in Dynamics AX 2012",
-                "Development and support for ERP solutions based on .NET, SPC 5+"
+                "Provide support for solutions in Dynamics AX 2009",
+                "Develop and support solutions in Dynamics AX 2012",
+                "Develop and support ERP solutions based on .NET, SPC 5+"
             ]
         },
         {
@@ -92,7 +92,7 @@
             "startDate": "2008-06-15",
             "endDate": "2012-09-30",
             "functions": [
-                "Development of solutions based on ADO.NET and SQLServer"
+                "Develop solutions based on ADO.NET and SQL Server"
             ]
         }
     ],
@@ -105,10 +105,10 @@
                 "degree": "Computer Science Engineer"
             }
         ],
-        "Courses": [
+        "courses": [
             {
                 "name": "Targit Business Intelligence",
-                "entity": "Targit partner",
+                "entity": "Targit Partner",
                 "url": "",
                 "notes": ""
             },
@@ -119,7 +119,7 @@
                 "notes": ""
             },
             {
-                "name": "Version Control Git/Github",
+                "name": "Version Control Git/GitHub",
                 "entity": "Udemy",
                 "url": "",
                 "notes": ""
@@ -179,7 +179,7 @@
                 "notes": ""
             }
         ],
-        "Certifications": [
+        "certifications": [
             {
                 "name": "Microsoft Dynamics AX 2012 Development Introduction",
                 "entity": "Microsoft",
@@ -192,11 +192,11 @@
             },
             {
                 "name": "Targit Certified Professional",
-                "entity": "Targit partner",
+                "entity": "Targit Partner",
                 "notes": ""
             }
         ],
-        "Additional": [
+        "additional": [
             "Highest CEFR English level achieved: B2"
         ]
     }
