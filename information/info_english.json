@@ -4,11 +4,11 @@
         "title": "Computer Science Engineer",
         "phone": "+502 5238 6656",
         "email": "josedfuentesl@hotmail.com",
-        "residenceCountry": "Guatemala"
+        "ResidenceCountry": "Guatemala"
     },
-    "professionalProfile": {
+    "profesionalProfile": {
         "summary": "Software engineer focused on the following languages and technologies:",
-        "technologies": [
+        "techs": [
             "Visual Studio .NET (VB & C#)",
             "Microsoft Dynamics 365 for Finance and Operations",
             "Microsoft Dynamics 365 Cloud POS",
@@ -105,7 +105,7 @@
                 "degree": "Computer Science Engineer"
             }
         ],
-        "courses": [
+        "Courses": [
             {
                 "name": "Targit Business Intelligence",
                 "entity": "Targit Partner",
@@ -179,7 +179,7 @@
                 "notes": ""
             }
         ],
-        "certifications": [
+        "Certifications": [
             {
                 "name": "Microsoft Dynamics AX 2012 Development Introduction",
                 "entity": "Microsoft",
@@ -196,7 +196,7 @@
                 "notes": ""
             }
         ],
-        "additional": [
+        "Additional": [
             "Highest CEFR English level achieved: B2"
         ]
     }
